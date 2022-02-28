@@ -1,9 +1,11 @@
-import 'dart:js';
+//import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:testflutter/screens/dataScreen.dart';
 import 'package:testflutter/screens/secondScreen.dart';
 import 'package:testflutter/screens/thirdScreen.dart';
+import 'screens/stackScreen.dart';
+
 
 void main() {
   runApp(MaterialApp(
@@ -15,6 +17,8 @@ void main() {
         '/second': (context) => const SecondPage(),
         '/third': (context) => const ThirdPage(),
         '/datos': (context) => const Datos()
+        '/stack':(context)=> const TestStack()
+
       }
       //home: HomePage(),
       ));
@@ -94,6 +98,18 @@ class HomePage extends StatelessWidget {
                   );
                   Navigator.pushNamed(context, '/datos');
                 })
+                   const SizedBox(height: 10.0),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+                padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+              ),
+              child: const Text('Stack'),
+                onPressed: (){
+                  Navigator.pushNamed(context,'/stack');
+              }
+            )
+                
           ],
         ),
       ),
