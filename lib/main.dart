@@ -6,7 +6,6 @@ import 'package:testflutter/screens/secondScreen.dart';
 import 'package:testflutter/screens/thirdScreen.dart';
 import 'screens/stackScreen.dart';
 
-
 void main() {
   runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -16,9 +15,8 @@ void main() {
         '/': (context) => const HomePage(),
         '/second': (context) => const SecondPage(),
         '/third': (context) => const ThirdPage(),
-        '/datos': (context) => const Datos()
-        '/stack':(context)=> const TestStack()
-
+        '/datos': (context) => const Datos(),
+        '/stack': (context) => const TestStack()
       }
       //home: HomePage(),
       ));
@@ -97,19 +95,18 @@ class HomePage extends StatelessWidget {
                     builder: (context) => const Datos(),
                   );
                   Navigator.pushNamed(context, '/datos');
-                })
-                   const SizedBox(height: 10.0),
+                }),
+            const SizedBox(height: 10.0),
             ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),
-                padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
-              ),
-              child: const Text('Stack'),
-                onPressed: (){
-                  Navigator.pushNamed(context,'/stack');
-              }
-            )
-                
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green),
+                  padding: MaterialStateProperty.all(
+                      EdgeInsets.symmetric(horizontal: 25, vertical: 15)),
+                ),
+                child: const Text('Stack'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/stack');
+                })
           ],
         ),
       ),
