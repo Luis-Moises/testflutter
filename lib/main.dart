@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:testflutter/screens/dataScreen.dart';
+import 'package:testflutter/screens/formScreen.dart';
 import 'package:testflutter/screens/secondScreen.dart';
 import 'package:testflutter/screens/thirdScreen.dart';
 import 'screens/stackScreen.dart';
@@ -12,7 +13,7 @@ void main() {
       title: 'Flutter demo',
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => const FormScreen(),
         '/second': (context) => const SecondPage(),
         '/third': (context) => const ThirdPage(),
         '/datos': (context) => const Datos(),
@@ -21,6 +22,8 @@ void main() {
       //home: HomePage(),
       ));
 }
+
+stackScreen() {}
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
