@@ -1,6 +1,7 @@
 //import 'dart:js';
 
 import 'package:flutter/material.dart';
+import 'package:testflutter/screens/cardScreen.dart';
 import 'package:testflutter/screens/dataScreen.dart';
 import 'package:testflutter/screens/formScreen.dart';
 import 'package:testflutter/screens/secondScreen.dart';
@@ -13,7 +14,7 @@ void main() {
       title: 'Flutter demo',
       initialRoute: '/',
       routes: {
-        '/': (context) => const FormScreen(),
+        '/': (context) => CardScreen(),
         '/second': (context) => const SecondPage(),
         '/third': (context) => const ThirdPage(),
         '/datos': (context) => const Datos(),
